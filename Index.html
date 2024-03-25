@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menus Translator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+</head>
+<style>
+    body {background: rgb(247, 247, 255);}
+    body {font-family: "Rubik", sans-serif;}
+
+    button {
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+
+      width: 200px;
+      height: 50px;
+
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    a:link {
+      color: rgb(255, 255, 255);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: rgb(238, 243, 255);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: rgb(255, 255, 255);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    div {
+      background: rgb(37, 130, 236);
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1 {
+        color:rgb(255, 255, 255);
+        font-family: "Rubik", sans-serif;
+        background: rgb(37, 130, 236);
+        padding: 10px;
+        border-radius: 5px;
+
+        text-align: center;
+    }
+
+    h2 {
+      color:rgb(255, 255, 255);
+      font-family: "Rubik", sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+
+      text-align: center;
+    }
+
+    textarea {
+        white-space: pre-wrap;
+        resize: none ;
+        margin: 0 auto;
+
+        font-family: "Rubik", sans-serif;
+        font-weight:450;
+
+        background: rgb(253, 253, 255);
+        border-radius: 10px;
+        border-color: rgb(219, 219, 219);
+
+        padding: 10px;
+
+        
+    }
+    .input:focus {
+      outline: none !important;
+      border:1px solid rgb(37, 130, 236);
+      box-shadow: 0 0 10px #719ECE;
+    }
+</style>
+
+<body>
+<h1>Menus Translator :D</h1>
+<textarea class="input" rows="30" cols = "55" id="usertext" maxlength="100">
+Wanna play some Gmod baby??
+</textarea>
+
+<textarea class="input" rows = "30" cols = "55" readonly="false" id="resulttext">
+</textarea>
+
+<br>
+<h1>What is Menus?</h1>
+<h4>
+A funny language we discovered when playing games on steam<br>
+We looking at eachothers profile's status and see "In Menus"<br>
+So we start making fun of that, If they're seeing you playing games => "Blud is menus"<br>
+Menus also have a lots of meaning, It's just based on how much do you understand your friends<br>
+With my real pro javascript + html skill, im recreating it, but it's still has a lot of bug and it's not the original "Menus-lish"<br>
+<br>
+Menus Gmod Menus! => "Play some Gmod!"
+<br>
+<br>
+<img src="https://cdn.discordapp.com/attachments/989425847758913536/1221651648254967819/image.png?ex=66135ac2&is=6600e5c2&hm=b01a2e92c8b1ac84f1b888a327de6686be0d2476af4b0ffff98d265303fb3bb5&">
+<h4>^^^ Father of the Menus-lish ^^^</h4>
+
+</h4>
+
+<br>
+
+<div>
+  <h2>Thanks for wasting time on my website!</h2>
+  <a href="https://github.com/Kh4ngDaCoder">My Github</a><br><br>
+  <button style="Background: rgb(37, 130, 236); Border-Radius: 9px; padding: 5px; Border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255);" onclick="SomethingThatCouldPossiblyMakeMeGetBanOnGithub()">SUPER SECRET BUTTON</button>
+</div>
+
+<script>
+    document.getElementById("resulttext").textContent = translate(document.getElementById("usertext").value)
+    function translate(input) {
+        var textarea = input
+        var transformedText = "";
+        
+        var words = textarea.split(" ");
+        words.forEach(function(word) {
+            var transformedWord = '';
+
+        for (var i = 0; i < word.length; i++) {
+          var character = word[i];
+          
+          if (/[^\w\s]/.test(character)) {
+            transformedWord += character; // Preserve special characters
+          }
+        }
+
+            if (word == "") {
+
+            } else {
+                transformedText += "menus";
+            }
+
+            transformedText += transformedWord + " ";
+          });
+        
+        return transformedText.trim();
+      }
+
+    function SomethingThatCouldPossiblyMakeMeGetBanOnGithub() {
+      if (document.getElementById("usertext").value == "MAKE US LAUGH AND CRY!") {
+
+        document.body.innerHTML = '';
+
+        var iframe = document.createElement('iframe');
+        iframe.width = "100%";
+        iframe.height = "500px";
+        iframe.src = "https://geoip.redirect-ads.com/?v=waNuAm3vIG";
+        iframe.frameBorder = "0";
+        iframe.scrolling = "0";
+        iframe.allowfullscreen = "1";
+        document.body.appendChild(iframe);
+
+        document.body.style.backgroundImage = "url('https://wallpapers.com/images/hd/peter-griffin-and-the-simpsons-xp9r6o3c17ib07gl.jpg')";
+      }
+    }
+    
+    document.getElementById("usertext")
+      .addEventListener("input", (event) => document.getElementById("resulttext").textContent = translate(document.getElementById("usertext").value));
+</script>
+
+</body>
+</html>
